@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./estilos/index.css' rel='stylesheet'>
+    <title>Home</title>
+</head>
+<body>
+   
+    <nav>
+        <div class="logo">Calculadora</div>
+        <label for="click" class="menu-btn">
+        </label>
+        <ul>
+          <li><a class="active" href="">GitHub</a></li>
+          <li><a class="active" href="./comentarios.html">Comentarios</a></li>
+        </ul>
+    </nav>
+    <div class="formulario">
+        <form id="form" name="calculator">
+            <input type="text" id="text" name="text">
+    
+            <div>
+                <input type="button" class="btn" value="1" onclick="calculator.text.value += '1' ">
+                <input type="button" class="btn" value="2" onclick="calculator.text.value += '2' ">
+                <input type="button" class="btn" value="3" onclick="calculator.text.value += '3' ">
+                <input type="button" class="btn" value="+" onclick="calculator.text.value += '+' ">
+            </div>
+    
+            <div>
+                <input type="button" class="btn" value="4" onclick="calculator.text.value += '4' ">
+                <input type="button" class="btn" value="5" onclick="calculator.text.value += '5' ">
+                <input type="button" class="btn" value="6" onclick="calculator.text.value += '6' ">
+                <input type="button" class="btn" value="-" onclick="calculator.text.value += '-' ">
+            </div>
+    
+            <div>
+                <input type="button" class="btn" value="7" onclick="calculator.text.value += '7' ">
+                <input type="button" class="btn" value="8" onclick="calculator.text.value += '8' ">
+                <input type="button" class="btn" value="9" onclick="calculator.text.value += '9' ">
+                <input type="button" class="btn" value="*" onclick="calculator.text.value += '*' ">
+            </div>
+    
+            <div>
+                <input type="button" class="btn" value="C" onclick="calculator.text.value = '' ">
+                <input type="button" class="btn" value="0" onclick="calculator.text.value += '0' ">
+                <input type="button" class="btn" value="=" onclick="calculate()">
+                <input type="button" class="btn" value="/" onclick="calculator.text.value += '/' ">
+            </div>
+        </form>
+    
+        <script>
+            function calculate() {
+                let inputValidate = 1;
+    
+                try {
+                    eval(calculator.text.value);
+                } catch (error) {
+                    if (error instanceof SyntaxError || error instanceof ReferenceError) {
+                        inputValidate = 0;
+                        calculator.text.value = "Erro de Digitação.Tente Denovo!"
+                    }
+                }
+                finally {
+                    if (inputValidate) {
+                        calculator.text.value = eval(calculator.text.value);
+                    }
+                }
+            }
+        </script>
+    
+    </div>
+    
+</body>
+   
+    
+</body>
+</html>
