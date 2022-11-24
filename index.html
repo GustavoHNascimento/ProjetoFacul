@@ -4,77 +4,343 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='./estilos/index.css' rel='stylesheet'>
+    <link href='./estilos/estilo.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
     <title>Home</title>
 </head>
 <body>
-   
+
     <nav>
-        <div class="logo">Calculadora</div>
+        <div class="logo">BookStore </div>
         <label for="click" class="menu-btn">
         </label>
         <ul>
-          <li><a class="active" href="">GitHub</a></li>
-          <li><a class="active" href="./comentarios.html">Comentarios</a></li>
+          <li><a class="active" href="./sobre.html">Sobre</a></li>
+          <li><a href="./inscrevase.html">Inscreva-se</a></li>
+          <li><a href="./comentarios.html">Comentarios</a></li>
         </ul>
     </nav>
-    <div class="formulario">
-        <form id="form" name="calculator">
-            <input type="text" id="text" name="text">
-    
-            <div>
-                <input type="button" class="btn" value="1" onclick="calculator.text.value += '1' ">
-                <input type="button" class="btn" value="2" onclick="calculator.text.value += '2' ">
-                <input type="button" class="btn" value="3" onclick="calculator.text.value += '3' ">
-                <input type="button" class="btn" value="+" onclick="calculator.text.value += '+' ">
-            </div>
-    
-            <div>
-                <input type="button" class="btn" value="4" onclick="calculator.text.value += '4' ">
-                <input type="button" class="btn" value="5" onclick="calculator.text.value += '5' ">
-                <input type="button" class="btn" value="6" onclick="calculator.text.value += '6' ">
-                <input type="button" class="btn" value="-" onclick="calculator.text.value += '-' ">
-            </div>
-    
-            <div>
-                <input type="button" class="btn" value="7" onclick="calculator.text.value += '7' ">
-                <input type="button" class="btn" value="8" onclick="calculator.text.value += '8' ">
-                <input type="button" class="btn" value="9" onclick="calculator.text.value += '9' ">
-                <input type="button" class="btn" value="*" onclick="calculator.text.value += '*' ">
-            </div>
-    
-            <div>
-                <input type="button" class="btn" value="C" onclick="calculator.text.value = '' ">
-                <input type="button" class="btn" value="0" onclick="calculator.text.value += '0' ">
-                <input type="button" class="btn" value="=" onclick="calculate()">
-                <input type="button" class="btn" value="/" onclick="calculator.text.value += '/' ">
-            </div>
-        </form>
-    
-        <script>
-            function calculate() {
-                let inputValidate = 1;
-    
-                try {
-                    eval(calculator.text.value);
-                } catch (error) {
-                    if (error instanceof SyntaxError || error instanceof ReferenceError) {
-                        inputValidate = 0;
-                        calculator.text.value = "Erro de Digitação.Tente Denovo!"
-                    }
-                }
-                finally {
-                    if (inputValidate) {
-                        calculator.text.value = eval(calculator.text.value);
-                    }
-                }
-            }
-        </script>
-    
-    </div>
-    
-</body>
    
-    
+
+
+
+
+    <section class="home" id="home">
+
+      <div class="row">
+  
+          <div class="content">
+              <h3>Tudo em até 75% off</h3>
+              <p>Promoções Black Friday Aproveite Já!</p>
+              <a href="#" class="btn">Compre Já</a>
+          </div>
+  
+          <div class="swiper books-slider">
+              <div class="swiper-wrapper">
+                  <a href="#" class="swiper-slide"><img src="image/biblioteca.png" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="image/principe.png" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="image/it.png" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="image/corte.png" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="image/evelyn.png" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="image/teto.png" alt=""></a>
+              </div>
+          </div>
+  
+      </div>
+  
+  </section>
+  
+  <section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="content">
+            <h3>Frete Gratis</h3>
+            <p>compras acima de $100</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+            <h3>Pagamento Seguro</h3>
+            <p>aceitamos todos tipos</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+            <h3>Fácil entrega</h3>
+            <p>10 dias no máximo</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+            <h3>24/7 Suporte</h3>
+            <p>Nos chame a qualquer momento</p>
+        </div>
+    </div>
+
+</section>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="newsletter">
+
+    <form action="">
+        <h3>Se inscreva para Novidades!</h3>
+        <input type="submit" value="Inscreva-se" class="btn">
+    </form>
+
+</section>
+
+
+
+<section class="arrivals" id="arrivals">
+
+  <h1 class="heading"> <span>Novidades quentes</span> </h1>
+
+  <div class="swiper arrivals-slider">
+
+      <div class="swiper-wrapper">
+
+          <a href="#" class="swiper-slide box">
+              <div class="image">
+                  <img src="image/clubelivro.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>Clube do Livro dos Homens</h3>
+                  <div class="price">$15.99 <span>$20.99</span></div>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+              </div>
+          </a>
+
+          <a href="#" class="swiper-slide box">
+              <div class="image">
+                  <img src="image/assimqueacaba.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>É Assim que Acaba: 1 Capa comum</h3>
+                  <div class="price">$20.99 <span>$45.50</span></div>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+              </div>
+          </a>
+
+          <a href="#" class="swiper-slide box">
+              <div class="image">
+                  <img src="image/essecoracao.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>Eu e esse meu coração</h3>
+                  <div class="price">$24.99 <span>$35.89</span></div>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+          </a>
+
+          <a href="#" class="swiper-slide box">
+              <div class="image">
+                  <img src="image/imperfeitos.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>Imperfeitos </h3>
+                  <div class="price">$12.59 <span>$20.99</span></div>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+          </a>
+
+          <a href="#" class="swiper-slide box">
+              <div class="image">
+                  <img src="image/vermelho.png" alt="">
+              </div>
+              <div class="content">
+                  <h3>Vermelho, branco e sangue azul</h3>
+                  <div class="price">$15.99 <span>$23.90</span></div>
+                  <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
+              </div>
+          </a>
+
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<section class="reviews" id="reviews">
+
+  <h1 class="heading"> <span>Comentários de clientes</span> </h1>
+
+  <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+
+          <div class="swiper-slide box">
+              <img src="image/pic-1.png" alt="">
+              <h3>Leonardo</h3>
+              <p>Amo esse site! sempre compro aqui e sempre entregam tudo certo meu site favorito</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+          </div>
+
+          <div class="swiper-slide box">
+              <img src="image/pic-2.png" alt="">
+              <h3>Leticia</h3>
+              <p>Super rapido a entrega e muito confiável adorei!</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+          </div>
+
+          <div class="swiper-slide box">
+              <img src="image/pic-4.png" alt="">
+              <h3>Gabriela</h3>
+              <p>Minha primeira vez no site e adorei, atendimento maravilhoso, vou comprar mais hahaha</p>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class="footer">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>Nossas localizações</h3>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Brasil </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> india </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> frança </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> japão </a>
+                   
+                </div>
+        
+                <div class="box">
+                    <h3>Links</h3>
+                    <a href="./index.html"> <i class="fas fa-arrow-right"></i> home </a>
+                    <a href="./sobre.html"> <i class="fas fa-arrow-right"></i> Sobre </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Inscreva-se </a>
+                    <a href="./comentarios.html"><i class="fas fa-arrow-right"></i> Comentarios</a>
+                </div>
+
+                <div class="box">
+                    <h3>Informações de contato</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> bookstore@gmail.com </a>
+                    <img src="image/worldmap.png" class="map" alt="">
+                </div>
+                
+            </div>
+        
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        
+        
+        
+        </section>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
